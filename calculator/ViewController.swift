@@ -18,14 +18,17 @@ class ViewController: UIViewController {
         
         let digit = sender.currentTitle!
         
-        if userIsInTyping{
+        if userIsInTyping {
             
-        let textCurrentDisplay = display!.text!
-        display!.text = textCurrentDisplay + digit
+            let textCurrentDisplay = display!.text!
+            display!.text = textCurrentDisplay + digit
+    
+        } else {
+            display!.text = digit
+            userIsInTyping = true
+        }
     
     
     }
-    
-    
-}
 
+}
